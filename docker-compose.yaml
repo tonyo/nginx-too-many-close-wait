@@ -1,0 +1,9 @@
+services:
+  nginx:
+    build: nginx
+    ports:
+      - "8080:8080"
+  envoy:
+    build: envoy
+    ports:
+      - "8090:8090"
