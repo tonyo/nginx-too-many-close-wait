@@ -7,3 +7,7 @@ services:
     build: envoy
     ports:
       - "8090:8090"
+  load-tester:
+    build: load-tester
+    # Done intentionally, launch the tester via `./run_load_tester.sh`
+    entrypoint: "false"
