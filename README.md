@@ -22,6 +22,6 @@ One of these cases: Envoy sitting in front of Nginx, and Nginx responds (uncondi
 
       ./run_load_tester.sh
 
-- Check the CLOSE_WAIT sockets in the Nginx container:
+- Check the CLOSE_WAIT sockets in the Nginx container (in another tab):
 
       docker-compose exec nginx watch 'netstat -atunpl | grep CLOSE_WAIT'
