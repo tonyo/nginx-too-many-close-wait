@@ -81,15 +81,16 @@ As we see, the second response (in blue) sent before reading the full request bo
 
 * Is the issue present when keep-alive is disabled in Nginx (`keepalive_timeout 0`)?
 
-  No, I couldn't reproduce the issue in that situation.
+  No, we couldn't reproduce the issue in that situation.
   
   
 * Has it caused any real problems yet?
 
   We haven't seen any hard failures (as in, crashes or unwanted 500 responses) because of this yet, but it does look like a socket leak, which might result in undesired behavior in the future.
   
-  
-  
+* Are there any known workarounds?
+
+  There is a [thread on Nginx forums](https://forum.nginx.org/read.php?2,286665,286699#msg-286699) with an issue that seems related. There is a suggested patch in the thread, and we tried it in our test environment. It seems that with the patch applied the issue cannot be reproduced, however we cannot make any claims about it being a proper fix just yet.
   
   
 
