@@ -72,7 +72,7 @@ This is how one of the TCP streams look like in Wireshark:
 
 As we see, the second response (in blue) sent before reading the full request body, which might hint at the specific situation when the issue is triggered.
 
-### Q&A
+## Q&A
 
 * Do these CLOSE_WAIT sockets disappear at some point?
 
