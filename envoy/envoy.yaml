@@ -1,6 +1,6 @@
 static_resources:
   clusters:
-    - name: nginx_proxy
+    - name: nginx
       type: STRICT_DNS
       connect_timeout: 1s
       lb_policy: ROUND_ROBIN
@@ -39,7 +39,7 @@ static_resources:
                         - match:
                             prefix: "/"
                           route:
-                            cluster: "nginx_proxy"
+                            cluster: "nginx"
                 http_filters:
                   - name: envoy.filters.http.router
 
