@@ -84,7 +84,14 @@ As we see, the second response (in blue) sent before reading the full request bo
   No, I couldn't reproduce the issue in that situation.
   
   
+* Has it caused any real problems yet?
 
+  We haven't seen any hard failures (as in, crashes or unwanted 500 responses) because of this yet, but it does look like a socket leak, which might result in undesired behavior in the future.
+  
+  
+  
+  
+  
 
 
 
