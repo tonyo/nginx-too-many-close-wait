@@ -1,5 +1,7 @@
 # nginx-too-many-close-wait
 
+## Note: the issue has been acknowledged by the Nginx team (https://trac.nginx.org/nginx/ticket/2145) and fixed in Nginx version 1.19.9.
+
 In this repository we demonstrate how the CLOSE_WAIT leak issue in Nginx can be reproduced.
 
 ## Description
